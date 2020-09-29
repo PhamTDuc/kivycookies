@@ -1,8 +1,8 @@
 {
     "full_name": "Pham Trung Duc",
     "email": "phamduc0701@gmail.com",
-    "repo_name": "kivycookies",
-    "app_class_name": "HelloKivy",
+    "repo_name": "kivykivy",
+    "app_class_name": "HelloKivyApp",
     "app_title":"Hello Cookie Title",
     "short_description":"Simple app that features a gray button",
     "version": "0.1.0",

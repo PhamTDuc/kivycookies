@@ -1,4 +1,24 @@
 #:kivy {{cookiecutter.kivy_version}}
+<MyGrid>:
+    GridLayout:
+        cols:1
+        size: root.width, root.height
 
-Button:
-    text: '{{cookiecutter.app_title}}'
+        GridLayout:
+            cols:2
+
+            Label:
+                text: "Name: "
+
+            TextInput:
+                multinline:False
+
+            Label:
+                text: "Email: "
+
+            TextInput:
+                multiline:False
+
+        Button:
+            text:"Submit"
+            on_press: app.btn()
