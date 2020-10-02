@@ -1,4 +1,6 @@
-#:kivy {{cookiecutter.kivy_version}}
+#:kivy 1.8.0
+<MyImage@Image>:
+    source:'../res/emoji.png'
 <MyGrid>:
     GridLayout:
         cols:1
@@ -19,6 +21,7 @@
             TextInput:
                 multiline:False
 
+            MyImage:
         Button:
             text:"Submit"
             on_press: app.btn()
