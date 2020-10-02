@@ -1,4 +1,5 @@
 # https://techwithtim.net/tutorials/kivy-tutorial/object-properties/
+# https://expobrain.net/2010/07/31/simple-event-dispatcher-in-python/
 from kiv.app import App
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label 
