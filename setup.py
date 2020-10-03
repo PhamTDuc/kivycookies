@@ -3,6 +3,7 @@ import os
 
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
+from glob import glob
 
 
 def read(fname):
@@ -45,11 +46,12 @@ setup(
     zip_safe=False,
     packages=find_packages(),
     package_data={
-        '{{cookiecutter.repo_name}}': ['*.kv*']
+        '{{cookiecutter.repo_name}}': ['*.kv*'],
+        'res': [glob.glob('res/**/*.png', recursive=True)]
     },
     entry_points={
         'console_scripts': [
-            '{{cookiecutter.repo_name}}={{cookiecutter.repo_name}}.main:main'
+            'kivy_app={{cookiecutter.repo_name}}.main:main'
         ]
     },
     tests_require=['pytest'],
