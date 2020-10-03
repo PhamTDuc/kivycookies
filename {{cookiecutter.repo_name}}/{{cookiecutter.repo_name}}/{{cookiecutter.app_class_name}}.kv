@@ -1,6 +1,6 @@
 #:kivy 1.8.0
 <MyImage@Image>:
-    source:'../res/emoji.png'
+    source:'res/emoji.png'
 <MyGrid>:
     GridLayout:
         cols:1
@@ -22,7 +22,9 @@
                 multiline:False
             MyImage:
             Image:
-            	source:'../res/hand.png'
+            	source:'res/hand.png'
+            Image:
+                source:'res/hand.png'
         Button:
             text:"Submit"
             on_press: app.btn()
