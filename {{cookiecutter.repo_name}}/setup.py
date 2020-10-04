@@ -3,7 +3,6 @@ import os
 
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
-from glob import glob
 
 
 def read(fname):
@@ -41,17 +40,15 @@ setup(
         "templates, example, documentation, tutorial, setup.py, package, "
         "android, touch, mobile, NUI"
     ),
-    url='https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}',
     install_requires=['kivy>=1.8.0'],
     zip_safe=False,
     packages=find_packages(),
     package_data={
-        '{{cookiecutter.repo_name}}': ['*.kv*'],
-        'res': [glob.glob('res/**/*.png', recursive=True)]
+        '{{cookiecutter.repo_name}}': ['*.kv*','res/*.png'],
     },
     entry_points={
         'console_scripts': [
-            'kivy_app={{cookiecutter.repo_name}}.main:main'
+            '{{cookiecutter.repo_name}}={{cookiecutter.repo_name}}.__main__:main'
         ]
     },
     tests_require=['pytest'],
